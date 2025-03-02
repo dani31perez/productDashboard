@@ -3,3 +3,7 @@ body {
   margin: 0;
   font-family: "Quicksand", cursive;
 }
+
+a {
+  text-decoration: none !important;
+}

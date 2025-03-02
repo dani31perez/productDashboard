@@ -26,11 +26,19 @@ function App() {
     setCart(newCart);
   };
 
+  const deleteCart = (productName) => {
+    const index = products.findIndex((product) => productName === product.name);
+    const newCart = [...cart];
+    if (newCart[index] === 0) return;
+    newCart[index] = 0;
+    setCart(newCart);
+  }
+
   return (
     <BrowserRouter>
       <Header cartSize={cartSize} />
       <Container fluid={true} style={{ marginLeft: "10vw", width: "90vw" }}>
-        <AppRoutes cart={cart} addCart={addCart} changeCart={changeCart} />
+        <AppRoutes cart={cart} addCart={addCart} changeCart={changeCart} deleteCart={deleteCart}/>
       </Container>
     </BrowserRouter>
   );

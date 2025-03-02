@@ -13,12 +13,14 @@ function ProductDetails({ cart, addCart, changeCart }) {
       <h1 className="fw-bold">{product.name}</h1>
       <h4 className="my-4 fw-normal">Price: $ {product.price}</h4>
       <h4 className="fw-normal">{product.description}</h4>
-      <Button className="m-4" onClick={() => addCart(productName, 1)}>
-        Add to cart
-      </Button>
-      <Button variant="secondary" as={Link} to="/home">
-        Back to products
-      </Button>
+      <div className="my-4">
+        <Button className="mx-4 mb-4" onClick={() => addCart(productName, 1)}>
+          Add to cart
+        </Button>
+        <Button className="mb-4" variant="secondary" as={Link} to="/home">
+          Back to products
+        </Button>
+      </div>
     </>
   );
 }

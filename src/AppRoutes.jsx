@@ -4,7 +4,7 @@ import Home from "./components/Home";
 import ProductDetails from "./components/ProductDetails";
 import ShoppingCart from "./components/ShoppingCart";
 
-function AppRoutes({ cart, addCart, changeCart }) {
+function AppRoutes({ cart, addCart, changeCart, deleteCart }) {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
@@ -22,7 +22,7 @@ function AppRoutes({ cart, addCart, changeCart }) {
       <Route
         path="/shoppingCart"
         element={
-          <ShoppingCart cart={cart} addCart={addCart} changeCart={changeCart} />
+          <ShoppingCart cart={cart} changeCart={changeCart} deleteCart={deleteCart} />
         }
       />
     </Routes>

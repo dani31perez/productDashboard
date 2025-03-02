@@ -13,7 +13,6 @@ function Home() {
             <h4>
               <Link
                 to={`/product/${product.name}`}
-                style={{ textDecoration: "none" }}
               >
                 {product.name}
               </Link>
