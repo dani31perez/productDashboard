@@ -1,14 +1,19 @@
-import { createRoot } from 'react-dom/client'
-import { BrowserRouter, Routes, Route } from 'react-router'
-import App from './App.jsx'
+import { createRoot } from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router";
+import Header from "./components/Header.jsx";
+import App from "./App.jsx";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import './index.css'
+import "./index.css";
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<App />} />
-    </Routes>
-  </BrowserRouter>,
-)
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/home" element={<App />} />
+      </Routes>
+    </>
+  </BrowserRouter>
+);
