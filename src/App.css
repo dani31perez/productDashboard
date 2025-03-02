@@ -1,5 +1,8 @@
 .productList {
-    flex-wrap: wrap;
     justify-content: space-between;
     height: 60vh;
+}
+
+.shoppingList {
+    max-height: 65vh;
 }

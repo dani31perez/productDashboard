@@ -18,7 +18,7 @@ function Home() {
                 {product.name}
               </Link>
             </h4>
-            <h5 className="fw-ligh">Price: {product.price}</h5>
+            <h5 className="fw-normal">Price: $ {product.price}</h5>
           </ListGroup.Item>
         ))}
       </ListGroup>
