@@ -1,7 +1,7 @@
 import React from "react";
-import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
+import { Navbar, Nav, Container } from "react-bootstrap";
 
-export default function Header() {
+ function Header() {
   return (
     <Navbar bg="dark" data-bs-theme="dark" expand="sm" className="bg-body-tertiary mb-5 p-0">
       <Container  className="mx-4 p-0" fluid={true}>
@@ -17,3 +17,5 @@ export default function Header() {
     </Navbar>
   );
 }
+
+export default Header;

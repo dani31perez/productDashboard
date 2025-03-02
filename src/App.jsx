@@ -1,25 +1,17 @@
 import "./App.css";
-import { products } from "./data/productData";
-import { Container, ListGroup } from "react-bootstrap";
-import { Link } from "react-router";
+import { Container } from "react-bootstrap";
+import { BrowserRouter } from "react-router";
+import AppRoutes from "./AppRoutes";
+import Header from "./components/Header";
 
 function App() {
   return (
-    <>
-      <h1>Product List</h1>
-      <ListGroup className="productList">
-        {products.map((product) => (
-          <ListGroup.Item style={{ border: 0 }}>
-            <h4>
-              <Link to={`/product/${product.name}`} style={{textDecoration: "none"}}>
-                {product.name}
-              </Link>
-            </h4>
-            <h5 className="fw-ligh">Price: {product.price}</h5>
-          </ListGroup.Item>
-        ))}
-      </ListGroup>
-    </>
+    <BrowserRouter>
+      <Header />
+      <Container fluid={true} style={{ marginLeft: "10vw", width: "90vw" }}>
+        <AppRoutes />
+      </Container>
+    </BrowserRouter>
   );
 }
 

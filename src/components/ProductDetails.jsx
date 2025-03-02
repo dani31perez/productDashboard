@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router";
 import { products } from "../data/productData";
-import { Container, Row, Col, ButtonGroup, Button } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import "../index.css";
 
 function ProductDetails() {
